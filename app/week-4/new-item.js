@@ -5,26 +5,30 @@ export default function NewItem(){
 
     const [quantity, setQuantity] = useState(1);
 
+    // quantity + 1, stops at 20
     const increment = () => {
         if (quantity < 20) {
         setQuantity(quantity + 1);
         }
     }
 
+    // quantity - 1, stops at 1
     const decrement = () =>{
         if (quantity > 1) {
         setQuantity(quantity - 1);
         }
     }
 
-    let buttonIncrement = "bg-blue-300 active:bg-yellow-200 hover:bg-blue-500 transition-colors text-white rounded-full w-6 h-6 ml-8 cursor-pointer";
+    // styling for increment button
+    let buttonIncrement = "bg-blue-300 active:bg-yellow-200 hover:bg-blue-500 transition-colors text-white rounded-full w-7 h-7 ml-8 cursor-pointer";
         if (quantity >= 20) {
-            buttonIncrement = "text-white rounded-full w-6 h-6 ml-8 bg-gray-400"
+            buttonIncrement = "text-white rounded-full w-7 h-7 ml-8 bg-gray-400"
         }
-
-    let buttonDecrement = "bg-red-300 active:bg-yellow-200 hover:bg-red-500 transition-colors text-white rounded-full w-6 h-6 m-4 cursor-pointer";
+    
+    //styling for decrement button
+    let buttonDecrement = "bg-red-300 active:bg-yellow-200 hover:bg-red-500 transition-colors text-white rounded-full w-7 h-7 m-4 cursor-pointer";
         if (quantity <= 1) {
-            buttonDecrement = "text-white rounded-full w-6 h-6 m-4 bg-gray-400"
+            buttonDecrement = "text-white rounded-full w-7 h-7 m-4 bg-gray-400"
         }
     
     return(
